@@ -1090,7 +1090,8 @@ class mail_thread(osv.AbstractModel):
             if partner_ids:
                 # postponed after message_post, because this is an external message and we don't want to create
                 # duplicate emails due to notifications
-                self.pool.get('mail.message').write(cr, uid, [new_msg_id], {'partner_ids': partner_ids}, context=context)
+                self.pool.get('mail.message').write(cr, uid, [new_msg_id], {'partner_ids': partner_ids,
+                                                    'notified_partner_ids': partner_ids}, context=context)
         return thread_id
 
     def message_process(self, cr, uid, model, message, custom_values=None,
