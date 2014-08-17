@@ -40,7 +40,7 @@
                             <span attrs="{'invisible':[('composition_mode', '!=', 'comment')]}">Followers of the document and</span>
                             <field name="partner_ids" widget="many2many_tags_email" placeholder="Add contacts to notify..."
                                 context="{'force_email':True, 'show_email':True}"
-                                attrs="{'invisible': [('composition_mode', '!=', 'comment')]}"/>
+                                attrs="{'invisible': [('composition_mode', '!=', False),('composition_mode', '!=', 'comment')]}"/>
                         </div>
                         <!-- mass post -->
                         <field name="notify"
