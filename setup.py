@@ -188,6 +188,7 @@ setuptools.setup(
           'vobject',
           'werkzeug',
           'xlwt',
+          'pyPdf',
       ],
       extras_require = {
           'SSL' : ['pyopenssl'],
